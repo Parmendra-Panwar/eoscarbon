@@ -8,6 +8,9 @@ export default function SuperAdminScreen({ route, navigation }) {
   return (
     <AppLayout>
     <View style={styles.container}>
+      <View style={{ marginTop: 20, alignSelf: "flex-end" }}>
+              <Button title="Logout" onPress={() => navigation.navigate("Login")} />
+            </View>
       <Text style={styles.title}>Welcome, {username}!</Text>
       <Text style={styles.subtitle}>You are logged in as Super Admin</Text>
       <Text style={styles.info}>
@@ -29,17 +32,13 @@ export default function SuperAdminScreen({ route, navigation }) {
           onPress={() => navigation.navigate("BuyerRequests")}
         />
       </View>
-
-      <View style={{ marginTop: 30 }}>
-        <Button title="Logout" onPress={() => navigation.navigate("Login")} />
-      </View>
     </View>
     </AppLayout>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 20 },
+  container: { flex: 1, alignItems: "center", padding: 20 },
   title: { fontSize: 28, fontWeight: "bold", marginBottom: 10 },
   subtitle: { fontSize: 18, marginBottom: 10 },
   info: { fontSize: 14, textAlign: "center", marginBottom: 20, color: "#555" },

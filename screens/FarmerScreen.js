@@ -48,46 +48,50 @@ export default function FarmerScreen({ route, navigation }) {
 
   return (
     <AppLayout>
-    <ScrollView contentContainerStyle={styles.container}>
-      {/* Language Switch */}
-      <TouchableOpacity
-        style={styles.langSwitch}
-        onPress={() => setLanguage(language === "en" ? "hi" : "en")}
-      >
-        <Text style={styles.langSwitchText}>{t.switchLang}</Text>
-      </TouchableOpacity>
+      <ScrollView contentContainerStyle={styles.container}>
+        {/* Language Switch */}
 
-      <Text style={styles.title}>{t.welcome}</Text>
-      <Text style={styles.subtitle}>{t.role}</Text>
+        <View style={{ flexDirection: "row", justifyContent: "space-between", width: "100%" }}>
+          <TouchableOpacity
+            style={styles.langSwitch}
+            onPress={() => setLanguage(language === "en" ? "hi" : "en")}
+          >
+            <Text style={styles.langSwitchText}>{t.switchLang}</Text>
+          </TouchableOpacity>
 
-      {/* Guidelines Section */}
-      <View style={styles.infoBox}>
-        <Text style={styles.infoTitle}>{t.introTitle}</Text>
-        <Text style={styles.infoText}>{t.introText}</Text>
-        <Text style={styles.step}>{t.step1}</Text>
-        <Text style={styles.step}>{t.step2}</Text>
-        <Text style={styles.step}>{t.step3}</Text>
-      </View>
+          <View style={styles.logout}>
+            <Button title={t.logout} onPress={() => navigation.navigate("Login")} />
+          </View>
+        </View>
 
-      {/* Action Buttons */}
-      <View style={styles.buttonContainer}>
-        <Button
-          title={t.registerBtn}
-          onPress={() => navigation.navigate("RegisterPlantation", { username })}
-        />
-      </View>
 
-      <View style={styles.buttonContainer}>
-        <Button
-          title={t.verifyBtn}
-          onPress={() => navigation.navigate("VerificationStatus", { username })}
-        />
-      </View>
+        <Text style={styles.title}>{t.welcome}</Text>
+        <Text style={styles.subtitle}>{t.role}</Text>
 
-      <View style={styles.logout}>
-        <Button title={t.logout} onPress={() => navigation.navigate("Login")} />
-      </View>
-    </ScrollView>
+        {/* Guidelines Section */}
+        <View style={styles.infoBox}>
+          <Text style={styles.infoTitle}>{t.introTitle}</Text>
+          <Text style={styles.infoText}>{t.introText}</Text>
+          <Text style={styles.step}>{t.step1}</Text>
+          <Text style={styles.step}>{t.step2}</Text>
+          <Text style={styles.step}>{t.step3}</Text>
+        </View>
+
+        {/* Action Buttons */}
+        <View style={styles.buttonContainer}>
+          <Button
+            title={t.registerBtn}
+            onPress={() => navigation.navigate("RegisterPlantation", { username })}
+          />
+        </View>
+
+        <View style={styles.buttonContainer}>
+          <Button
+            title={t.verifyBtn}
+            onPress={() => navigation.navigate("VerificationStatus", { username })}
+          />
+        </View>
+      </ScrollView>
     </AppLayout>
   );
 }
@@ -118,7 +122,7 @@ const styles = StyleSheet.create({
   infoText: { fontSize: 16, marginBottom: 10, lineHeight: 22, color: "#444" },
   step: { fontSize: 15, marginBottom: 5, color: "#333" },
   buttonContainer: { marginVertical: 10, width: "90%" },
-  logout: { marginTop: 20, width: "60%" },
+  logout: { marginTop: 20, alignSelf: "flex-start" },
   langSwitch: { marginTop: 20, alignSelf: "flex-end", marginBottom: 10 },
   langSwitchText: { color: "#1976d2", fontSize: 16, fontWeight: "600" },
 });
