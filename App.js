@@ -13,6 +13,9 @@ import VerificationStatus from "./screens/Farmer/VerificationStatus";
 import RequestsScreen from "./screens/admin/RequestsScreen";
 import RequestsApprovedScreen from "./screens/SuperAdmin/RequestsApprovedScreen";
 import BuyerRequestsScreen from "./screens/SuperAdmin/BuyerRequestsScreen";
+import BusinessScreen from "./screens/Businessman";
+import BuyScreen from "./screens/Businessman/BuyScreen";
+import StatusScreen from "./screens/Businessman/StatusScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +33,9 @@ export default function App() {
         <Stack.Screen name="Farmer" component={FarmerScreen} />
           <Stack.Screen name="RegisterPlantation" component={RegisterPlantation} />
           <Stack.Screen name="VerificationStatus" component={VerificationStatus} />
+        <Stack.Screen name="Businessman" component={BusinessScreen} />
+          <Stack.Screen name="Buy" component={BuyScreen} />
+          <Stack.Screen name="BuyStatus" component={StatusScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

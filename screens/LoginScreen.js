@@ -15,6 +15,7 @@ export default function LoginScreen({ navigation }) {
     }
     if (role === "admin") navigation.navigate("Admin", { username });
     else if (role === "superadmin") navigation.navigate("SuperAdmin", { username });
+    else if (role === "businessman") navigation.navigate("Businessman", { username });
     else navigation.navigate("Farmer", { username });
   };
 
@@ -43,6 +44,7 @@ export default function LoginScreen({ navigation }) {
         <Picker.Item label="Admin" value="admin" />
         <Picker.Item label="Super Admin" value="superadmin" />
         <Picker.Item label="Farmer" value="farmer" />
+        <Picker.Item label="Businessman" value="businessman" />
       </Picker>
 
       <Button title="Login" onPress={handleLogin} />
