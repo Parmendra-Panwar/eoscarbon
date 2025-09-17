@@ -7,30 +7,30 @@ const dummyData = [
     id: 1,
     crop: "Mangroves",
     location: "Coastal Area A",
-    ngoStatus: "Verified ✅",
-    govStatus: "Verified ✅",
+    ngoStatus: "Verified",
+    govStatus: "Verified",
   },
   {
     id: 2,
     crop: "Seagrass",
     location: "River Delta B",
-    ngoStatus: "Verified ✅",
-    govStatus: "Pending ⏳",
+    ngoStatus: "Verified",
+    govStatus: "Pending",
   },
   {
     id: 3,
     crop: "Salt Marsh",
     location: "Village C",
-    ngoStatus: "Rejected ❌",
+    ngoStatus: "Rejected",
     govStatus: "N/A",
   },
 ];
 
 function getOverallStatus(ngo, gov) {
-  if (ngo.includes("Rejected")) return "Rejected ❌";
-  if (ngo.includes("Pending") || gov.includes("Pending")) return "Pending ⏳";
-  if (ngo.includes("Verified") && gov.includes("Verified")) return "Approved ✅";
-  return "In Progress 🔄";
+  if (ngo.includes("Rejected")) return "Rejected";
+  if (ngo.includes("Pending") || gov.includes("Pending")) return "Pending";
+  if (ngo.includes("Verified") && gov.includes("Verified")) return "Approved";
+  return "In Progress";
 }
 
 export default function VerificationStatus() {

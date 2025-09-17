@@ -51,14 +51,14 @@ export default function RequestsApprovedScreen() {
 
                 <View style={styles.modalButtons}>
                   <Button
-                    title="Approve ✅"
+                    title="Approve"
                     onPress={() => {
                       console.log("Final Approved:", selectedRequest.id);
                       setSelectedRequest(null);
                     }}
                   />
                   <Button
-                    title="Reject ❌"
+                    title="Reject"
                     color="red"
                     onPress={() => {
                       console.log("Final Rejected:", selectedRequest.id);

@@ -51,9 +51,9 @@ export default function LoginScreen({ navigation }) {
         style={styles.picker}
         onValueChange={(itemValue) => setRole(itemValue)}
       >
-        <Picker.Item label="Farmer" value="farmer" />
+        <Picker.Item label="NGO" value="farmer" />
         <Picker.Item label="Businessman" value="businessman" />
-        <Picker.Item label="Admin (NGO)" value="admin" />
+        <Picker.Item label="Verifier" value="admin" />
         <Picker.Item label="Super Admin (Gov)" value="superadmin" />
       </Picker>
 

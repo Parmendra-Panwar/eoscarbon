@@ -8,11 +8,11 @@ export default function StatusScreen({ route }) {
   return (
     <AppLayout>
     <View style={styles.container}>
-      <Text style={styles.title}>Request Status 📦</Text>
+      <Text style={styles.title}>Request Status</Text>
       {success ? (
-        <Text style={styles.success}>Your request was successful 🎉</Text>
+        <Text style={styles.success}>Your request was successful</Text>
       ) : (
-        <Text style={styles.error}>Something went wrong ❌</Text>
+        <Text style={styles.error}>Something went wrong</Text>
       )}
     </View>
     </AppLayout>

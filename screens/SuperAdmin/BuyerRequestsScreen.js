@@ -53,14 +53,14 @@ export default function BuyerRequestsScreen() {
 
                 <View style={styles.modalButtons}>
                   <Button
-                    title="Approve ✅"
+                    title="Approve"
                     onPress={() => {
                       console.log("Buyer Approved:", selectedBuyer.id);
                       setSelectedBuyer(null);
                     }}
                   />
                   <Button
-                    title="Reject ❌"
+                    title="Reject"
                     color="red"
                     onPress={() => {
                       console.log("Buyer Rejected:", selectedBuyer.id);

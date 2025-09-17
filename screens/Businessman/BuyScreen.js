@@ -17,7 +17,7 @@ export default function BuyScreen({ navigation }) {
   return (
     <AppLayout>
     <View style={styles.container}>
-      <Text style={styles.title}>Price: $49.99 💳</Text>
+      <Text style={styles.title}>Price: 99999.00</Text>
       <TextInput
         style={styles.input}
         placeholder="Enter your name"
@@ -30,7 +30,7 @@ export default function BuyScreen({ navigation }) {
       <Modal visible={modalVisible} transparent animationType="slide">
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <Text style={styles.modalText}>Purchase request submitted ✅</Text>
+            <Text style={styles.modalText}>Purchase request submitted</Text>
             <TouchableOpacity
               style={styles.modalButton}
               onPress={() => {

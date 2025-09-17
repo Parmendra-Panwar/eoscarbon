@@ -9,9 +9,9 @@ export default function AdminScreen({ route, navigation }) {
     <AppLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Welcome, {username}!</Text>
-      <Text style={styles.subtitle}>You are logged in as Admin</Text>
+      <Text style={styles.subtitle}>You are logged in as Verifier</Text>
       <Text style={styles.info}>
-        As an Admin, you are responsible for reviewing blue carbon crop
+        As an Verifier, you are responsible for reviewing blue carbon crop
         requests submitted by NGOs. You can approve or reject them before they
         go to Government Superadmin.
       </Text>

@@ -16,8 +16,8 @@ export default function FarmerScreen({ route, navigation }) {
   const content = {
     en: {
       welcome: `Welcome, ${username}!`,
-      role: "You are logged in as Farmer",
-      introTitle: "Farmer Guidelines",
+      role: "You are logged in as NGO",
+      introTitle: "NGO Guidelines",
       introText:
         "As part of the Blue Carbon initiative, farmers can contribute to reducing carbon emissions by registering their plantations. Once registered, your crops will be verified by local NGOs and government officials. Verified plantations will be eligible for government incentives and payments.",
       step1: "1. Register your plantation (location, area, crop type, NGO).",
@@ -30,8 +30,8 @@ export default function FarmerScreen({ route, navigation }) {
     },
     hi: {
       welcome: `स्वागत है, ${username}!`,
-      role: "आप किसान के रूप में लॉगिन हैं",
-      introTitle: "किसान हेतु दिशानिर्देश",
+      role: "आप NGO के रूप में लॉगिन हैं",
+      introTitle: "NGO हेतु दिशानिर्देश",
       introText:
         "ब्लू कार्बन योजना के तहत किसान कार्बन उत्सर्जन को कम करने में योगदान कर सकते हैं। इसके लिए आप अपनी पौधारोपण जानकारी दर्ज करें। दर्ज करने के बाद स्थानीय एनजीओ और सरकारी अधिकारी इसकी जाँच करेंगे। सत्यापित पौधारोपण पर आपको सरकारी प्रोत्साहन और भुगतान मिलेगा।",
       step1: "१. अपने पौधारोपण को दर्ज करें (स्थान, क्षेत्र, फसल प्रकार, एनजीओ)।",

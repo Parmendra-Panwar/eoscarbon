@@ -51,14 +51,14 @@ export default function RequestsScreen() {
 
                 <View style={styles.modalButtons}>
                   <Button
-                    title="Approve ✅"
+                    title="Approve"
                     onPress={() => {
                       console.log("Approved:", selectedRequest.id);
                       setSelectedRequest(null);
                     }}
                   />
                   <Button
-                    title="Reject ❌"
+                    title="Reject"
                     color="red"
                     onPress={() => {
                       console.log("Rejected:", selectedRequest.id);
