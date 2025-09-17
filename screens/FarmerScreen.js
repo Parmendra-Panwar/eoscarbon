@@ -7,6 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
+import AppLayout from "../components/AppLayout";
 
 export default function FarmerScreen({ route, navigation }) {
   const { username } = route.params;
@@ -46,6 +47,7 @@ export default function FarmerScreen({ route, navigation }) {
   const t = content[language];
 
   return (
+    <AppLayout>
     <ScrollView contentContainerStyle={styles.container}>
       {/* Language Switch */}
       <TouchableOpacity
@@ -86,6 +88,7 @@ export default function FarmerScreen({ route, navigation }) {
         <Button title={t.logout} onPress={() => navigation.navigate("Login")} />
       </View>
     </ScrollView>
+    </AppLayout>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import AppLayout from "../../components/AppLayout";
 
 const dummyData = [
   {
@@ -34,6 +35,7 @@ function getOverallStatus(ngo, gov) {
 
 export default function VerificationStatus() {
   return (
+    <AppLayout>
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.heading}>Verification Status</Text>
       {dummyData.map((item) => (
@@ -59,6 +61,7 @@ export default function VerificationStatus() {
         </View>
       ))}
     </ScrollView>
+    </AppLayout>
   );
 }
 

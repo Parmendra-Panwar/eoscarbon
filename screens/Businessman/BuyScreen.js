@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Button, TextInput, Modal, TouchableOpacity } from "react-native";
+import AppLayout from "../../components/AppLayout";
 
 export default function BuyScreen({ navigation }) {
   const [name, setName] = useState("");
@@ -14,6 +15,7 @@ export default function BuyScreen({ navigation }) {
   };
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Price: $49.99 💳</Text>
       <TextInput
@@ -42,6 +44,7 @@ export default function BuyScreen({ navigation }) {
         </View>
       </Modal>
     </View>
+    </AppLayout>
   );
 }
 

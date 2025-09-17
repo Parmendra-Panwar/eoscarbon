@@ -8,6 +8,7 @@ import {
   Modal,
   Button,
 } from "react-native";
+import AppLayout from "../../components/AppLayout";
 
 const ngoApprovedRequests = [
   { id: 1, crop: "Mangroves", location: "Coastal Area A", approvedBy: "NGO A" },
@@ -18,6 +19,7 @@ export default function RequestsApprovedScreen() {
   const [selectedRequest, setSelectedRequest] = useState(null);
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.heading}>Final Approval - Plantation Requests</Text>
 
@@ -72,6 +74,7 @@ export default function RequestsApprovedScreen() {
         </View>
       </Modal>
     </View>
+    </AppLayout>
   );
 }
 

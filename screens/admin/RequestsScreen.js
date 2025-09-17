@@ -8,6 +8,7 @@ import {
   Modal,
   Button,
 } from "react-native";
+import AppLayout from "../../components/AppLayout";
 
 const dummyRequests = [
   { id: 1, crop: "Mangroves", location: "Coastal Area A", submittedBy: "NGO A" },
@@ -18,6 +19,7 @@ export default function RequestsScreen() {
   const [selectedRequest, setSelectedRequest] = useState(null);
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.heading}>Pending Requests</Text>
 
@@ -75,6 +77,7 @@ export default function RequestsScreen() {
         </View>
       </Modal>
     </View>
+    </AppLayout>
   );
 }
 

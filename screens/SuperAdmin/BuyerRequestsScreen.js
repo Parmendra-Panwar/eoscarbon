@@ -8,6 +8,7 @@ import {
   Modal,
   Button,
 } from "react-native";
+import AppLayout from "../../components/AppLayout";
 
 const buyerRequests = [
   { id: 1, buyer: "ABC Corp", coins: 100 },
@@ -19,6 +20,7 @@ export default function BuyerRequestsScreen() {
   const totalCoins = 1000; // example: gov has 1000 Blue Carbon Coins
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.heading}>Buyer Requests</Text>
       <Text style={styles.subHeading}>
@@ -74,6 +76,7 @@ export default function BuyerRequestsScreen() {
         </View>
       </Modal>
     </View>
+    </AppLayout>
   );
 }
 

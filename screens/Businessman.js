@@ -1,12 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
+import AppLayout from "../components/AppLayout";
 
 export default function BusinessScreen({ navigation }) {
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Business Man Store 🏪</Text>
       <Button title="Buy Now" onPress={() => navigation.navigate("Buy")} />
     </View>
+    </AppLayout>
   );
 }
 

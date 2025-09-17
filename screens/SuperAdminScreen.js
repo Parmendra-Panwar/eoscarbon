@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
+import AppLayout from "../components/AppLayout";
 
 export default function SuperAdminScreen({ route, navigation }) {
   const { username } = route.params;
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Welcome, {username}!</Text>
       <Text style={styles.subtitle}>You are logged in as Super Admin</Text>
@@ -32,6 +34,7 @@ export default function SuperAdminScreen({ route, navigation }) {
         <Button title="Logout" onPress={() => navigation.navigate("Login")} />
       </View>
     </View>
+    </AppLayout>
   );
 }
 

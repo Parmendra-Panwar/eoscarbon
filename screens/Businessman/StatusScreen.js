@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import AppLayout from "../../components/AppLayout";
 
 export default function StatusScreen({ route }) {
   const { success } = route.params || { success: false };
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Request Status 📦</Text>
       {success ? (
@@ -13,6 +15,7 @@ export default function StatusScreen({ route }) {
         <Text style={styles.error}>Something went wrong ❌</Text>
       )}
     </View>
+    </AppLayout>
   );
 }
 

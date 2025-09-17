@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import AppLayout from "../../components/AppLayout";
 
 export default function RegisterPlantation({ navigation }) {
   const [location, setLocation] = useState("");
@@ -26,6 +27,7 @@ export default function RegisterPlantation({ navigation }) {
   };
 
   return (
+    <AppLayout>
     <View style={styles.container}>
       <Text style={styles.heading}>Register Plantation</Text>
 
@@ -85,6 +87,7 @@ export default function RegisterPlantation({ navigation }) {
         </View>
       </Modal>
     </View>
+    </AppLayout>
   );
 }
 
