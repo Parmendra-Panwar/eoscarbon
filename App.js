@@ -8,6 +8,9 @@ import SignupScreen from "./screens/SignupScreen";
 import AdminScreen from "./screens/AdminScreen";
 import SuperAdminScreen from "./screens/SuperAdminScreen";
 import FarmerScreen from "./screens/FarmerScreen";
+import RegisterPlantation from "./screens/Farmer/RegisterPlantation";
+import VerificationStatus from "./screens/Farmer/VerificationStatus";
+import RequestsScreen from "./screens/admin/RequestsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,8 +21,11 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Sign Up" component={SignupScreen} />
         <Stack.Screen name="Admin" component={AdminScreen} />
+        <Stack.Screen name="Requests" component={RequestsScreen} />
         <Stack.Screen name="SuperAdmin" component={SuperAdminScreen} />
         <Stack.Screen name="Farmer" component={FarmerScreen} />
+        <Stack.Screen name="RegisterPlantation" component={RegisterPlantation} />
+        <Stack.Screen name="VerificationStatus" component={VerificationStatus} />
       </Stack.Navigator>
     </NavigationContainer>
   );

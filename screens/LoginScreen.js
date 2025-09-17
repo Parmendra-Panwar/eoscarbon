@@ -5,6 +5,7 @@ import { Picker } from "@react-native-picker/picker";
 
 export default function LoginScreen({ navigation }) {
   const [username, setUsername] = useState("");
+  const [password, setpassword] = useState("");
   const [role, setRole] = useState("admin");
 
   const handleLogin = () => {
@@ -26,6 +27,12 @@ export default function LoginScreen({ navigation }) {
         placeholder="Enter Username"
         value={username}
         onChangeText={setUsername}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Enter Password"
+        value={password}
+        onChangeText={setpassword}
       />
 
       <Picker
